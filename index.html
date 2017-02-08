@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
+
+    <title>Overwatch Counters</title>
+
+    <!-- javascript -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+
+    <style>
+      body { min-width: 320px; max-width: 100%; background:#E9E9E9; font-color:#454A4D; }
+      table { width:100%; }
+      th { width:50%; background:#F59E2F; border: 1px solid #FFF; }
+      .logo { width:100% }
+      .selected { padding:5px 0; }
+      .large_pic { max-height:91px; }
+      .small_pic { height:78px; margin-right:1px; }
+      .tiny_pic { height:40px; }
+      .hero_details { background:#FCE2C0; border-bottom: 1px solid #FFF; }
+      .hero-title { font-size:125%; background:#F9C179; font-weight:bold; }
+      .wrapper input { width:100%; float:left; padding:10px 0; margin:5px 0; }
+      .wrapper button { height:32px; width:32px; background: url('./img/mic.png'); border:0; margin: 8px -33px 0; cursor: pointer; }
+      #record:hover { background-position: 33px 0; }
+      .active { background-position: 64px 0 !important; }
+    </style>
+  </head>
+
+  <body>
+    <img src="./img/counters_logo.png" alt="OW Counters" class="logo" />
+    <div class="wrapper">
+      <input type="text" id="txtHeroes" default="Heroes" placeholder=" Enter enemy comp..." autofocus onclick="recognition.stop();" />
+      <button id="record"></button>
+    </div>
+    
+    <div class="selected"></div>
+    <table style="font-size:80%;" align="center">
+      <tr><th>What Not To Pick</th><th>What You Should Pick</th></tr>
+      <tr>
+        <td valign="top" class="recommended"></td>
+        <td valign="top" class="notgood"></td>
+      </tr>
+    </table>
+    <i style="font-size:75%;">* data pulled from <a href="http://www.owfire.com/overwatch/wiki/heroes/" target="_blank">owfire.com</a></i>
+
+    <script src="./js/process.js"></script>
+  </body>
+</html>
