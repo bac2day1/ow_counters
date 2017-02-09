@@ -19,9 +19,12 @@
       .large_pic { max-height:91px; }
       .small_pic { height:78px; margin-right:1px; }
       .tiny_pic { height:40px; }
+      .hero_pick { width:100%; text-align:center; }
+      .hero_pick img { margin:0 1px; cursor:pointer; }
+      .hero_pick img:hover { background:#B0B0B0; }
       .hero_details { background:#FCE2C0; border-bottom: 1px solid #FFF; }
       .hero-title { font-size:125%; background:#F9C179; font-weight:bold; }
-      .wrapper input { width:100%; float:left; padding:10px 0; margin:5px 0; }
+      .wrapper input { width:99%; float:left; padding:10px 0; margin:5px 0; }
       .wrapper button { height:32px; width:32px; background: url('./img/mic.png'); border:0; margin: 8px -33px 0; cursor: pointer; }
       #record:hover { background-position: 33px 0; }
       .active { background-position: 64px 0 !important; }
@@ -34,7 +37,7 @@
       <input type="text" id="txtHeroes" default="Heroes" placeholder=" Enter enemy comp..." autofocus onclick="recognition.stop();" />
       <button id="record"></button>
     </div>
-    
+    <div class="hero_pick"></div>    
     <div class="selected"></div>
     <table style="font-size:80%;" align="center">
       <tr><th>What Not To Pick</th><th>What You Should Pick</th></tr>

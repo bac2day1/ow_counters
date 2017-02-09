@@ -47,20 +47,38 @@ $(function() {
   recommended = $('.recommended');
   notgood = $('.notgood');
   record = $('#record');
+  heroPick = $('.hero_pick');
 
   // Load stored JSON object
   $.getJSON( "./data/ow.json", function(data) {
     maps = data.maps;
     heroes = data.heroes;
     console.log(data);
+    
+    for(var hero in heroes) {
+      heroPick.append('<img src="'+heroes[hero].img+'" alt="" title="'+upper(heroes[hero].data)+'" class="tiny_pic heroes" data-hero="'+heroes[hero].data+'" />');
+    }
+    $('.heroes').click(function() { 
+      var h = $(this).data('hero');
+      var listVal = heroList.val().toLowerCase();
+
+      if(listVal.indexOf(h) >= 0) {
+        heroList.val(heroList.val().replace(h,'').replace('  ',' ')); 
+      } else {
+        heroList.val(heroList.val() + ' ' + h);
+      }
+      ProcessRequest();
+    });
   }).fail(function( jqxhr, textStatus, error ) {
     var err = textStatus + ", " + error;
     console.log( "Request Failed: " + err );
   });
 
+
   heroList.change(function() { ProcessRequest(); });
   heroList.click(function() { record.removeClass('active'); recognition.stop(); });
   record.click(function() { record.addClass('active'); recognition.start(); });
+
 });
 
 // Process Speech 
