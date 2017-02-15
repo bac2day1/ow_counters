@@ -5,7 +5,8 @@ th { width:50%; background:#F59E2F; border: 1px solid #FFF; }
 .logo { width:100% }
 .selected { padding:5px 0; }
 .large_pic { max-height:91px; }
-.small_pic { height:78px; width:45px; margin-right:1px; }
+.smaller_pic { width:4%; margin-right:1px; }
+.small_pic { width:48px; margin-right:1px; }
 .tiny_pic { height:45px; }
 .hero_pick { width:100%; text-align:center;  }
 .hero_pick img { margin:0 1px; cursor:pointer; }

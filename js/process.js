@@ -56,7 +56,7 @@ $(function() {
     console.log(data);
     
     for(var hero in heroes) {
-      heroPick.append('<img src="'+heroes[hero].img+'" alt="" title="'+upper(heroes[hero].data)+'" class="small_pic heroes hero-pick-'+heroes[hero].data+'" data-hero="'+heroes[hero].data+'" />');
+      heroPick.append('<img src="'+heroes[hero].img+'" alt="" title="'+upper(heroes[hero].data)+'" class="smaller_pic heroes hero-pick-'+heroes[hero].data+'" data-hero="'+heroes[hero].data+'" />');
     }
     heroPick.append('<div id="clear_heroes" title="Clear Selection" tabstop="false">clear selection</div>');
 
@@ -223,13 +223,13 @@ function ProcessRequest() {
 
         for(var itm in strong) { 
           good[itm] = (good[itm])? good[itm] + strong[itm]: strong[itm];
-          var html = '<div style="float:left; width:25px; margin:1px; color:white; background:'+rateScore(strong[itm], 0)+';" title="'+upper(h)+'">'+getPicture(h,'tiny')+'<br /><div style="text-align:center;">'+strong[itm]+'</div></div>';
+          var html = '<div style="float:left; width:27px; margin:1px; color:white; background:'+rateScore(strong[itm], 0)+';" title="'+upper(h)+'">'+getPicture(h,'tiny')+'<br /><div style="text-align:center;">'+strong[itm]+'</div></div>';
           good_detail[itm] = (good_detail[itm])? good_detail[itm]+html: html;
         }
 
         for(var itm in weak) { 
           bad[itm] = (bad[itm])? bad[itm] + weak[itm]: weak[itm]; 
-          var html = '<div style="float:left; width:25px; margin:1px; color:white; background:'+rateScore(weak[itm], 1)+';" title="'+upper(h)+'">'+getPicture(h,'tiny')+'<br /><div style="text-align:center;">'+weak[itm]+'</div></div>';
+          var html = '<div style="float:left; width:27px; margin:1px; color:white; background:'+rateScore(weak[itm], 1)+';" title="'+upper(h)+'">'+getPicture(h,'tiny')+'<br /><div style="text-align:center;">'+weak[itm]+'</div></div>';
           bad_detail[itm] = (bad_detail[itm])? bad_detail[itm]+html: html;
         }
       }
