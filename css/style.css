@@ -1,0 +1,22 @@
+html { overflow-y:scroll; }
+body { height:101%; min-width: 320px; max-width: 98%; background:#E9E9E9; font-color:#454A4D; margin: 0 auto; }
+table { width:100%; }
+th { width:50%; background:#F59E2F; border: 1px solid #FFF; }
+.logo { width:100% }
+.selected { padding:5px 0; }
+.large_pic { max-height:91px; }
+.small_pic { height:78px; width:45px; margin-right:1px; }
+.tiny_pic { height:45px; }
+.hero_pick { width:100%; text-align:center;  }
+.hero_pick img { margin:0 1px; cursor:pointer; }
+.hero_pick img:hover { background:#B0B0B0; }
+.selected-hero { background-color:darkgreen; }
+.hero_details { background:#FCE2C0; border-bottom: 1px solid #FFF; }
+.hero-title { font-size:125%; background:#F9C179; font-weight:bold; }
+.wrapper input { width:99%; float:left; padding:10px 0; margin:5px 0; }
+.wrapper button { height:32px; width:32px; background: url('../img/mic.png'); border:0; margin: 8px -33px 0; cursor: pointer; }
+#record:hover { background-position: 33px 0; }
+#clear_heroes { width:98%; margin:0 auto; padding:3px; font-size:75%; background:#C0C0C0; border:1px solid #A0A0A0; vertical-align:middle; cursor: pointer; font-weight:bold; }
+#clear_heroes:hover { background:#808080; }
+#clear_heroes:active { background:#A0A0A0; border:1px solid #404040; }
+.active { background-position: 64px 0 !important; }

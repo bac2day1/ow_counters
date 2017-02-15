@@ -58,6 +58,7 @@ $(function() {
     for(var hero in heroes) {
       heroPick.append('<img src="'+heroes[hero].img+'" alt="" title="'+upper(heroes[hero].data)+'" class="small_pic heroes hero-pick-'+heroes[hero].data+'" data-hero="'+heroes[hero].data+'" />');
     }
+    heroPick.append('<div id="clear_heroes" title="Clear Selection" tabstop="false">clear selection</div>');
 
     $('.heroes').click(function() { 
       var h = $(this).data('hero');
@@ -68,8 +69,10 @@ $(function() {
       } else {
         heroList.val(heroList.val() + ' ' + h);
       }
+      
       ProcessRequest();
     });
+    $('#clear_heroes').click(function() { ;heroList.val(''); ProcessRequest(); });
   }).fail(function( jqxhr, textStatus, error ) {
     var err = textStatus + ", " + error;
     console.log( "Request Failed: " + err );
