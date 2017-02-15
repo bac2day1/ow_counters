@@ -1,7 +1,7 @@
 <?php header( 'Content-type: text/html; charset=utf-8' ); ?>
 <?php 
 
-  set_time_limit(120);
+  set_time_limit(240);
 
   // ERROR HANDLING
   error_reporting(E_ALL);

@@ -8,7 +8,8 @@
     <title>Overwatch Counters</title>
 
     <!-- javascript -->
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.js"></script>
 
     <style>
       body { min-width: 320px; max-width: 98%; background:#E9E9E9; font-color:#454A4D; margin: 0 auto; }
@@ -18,10 +19,11 @@
       .selected { padding:5px 0; }
       .large_pic { max-height:91px; }
       .small_pic { height:78px; margin-right:1px; }
-      .tiny_pic { height:40px; }
+      .tiny_pic { height:45px; }
       .hero_pick { width:100%; text-align:center; }
       .hero_pick img { margin:0 1px; cursor:pointer; }
       .hero_pick img:hover { background:#B0B0B0; }
+      .selected-hero { background-color:darkgreen; border:3px solid darkgreen; }
       .hero_details { background:#FCE2C0; border-bottom: 1px solid #FFF; }
       .hero-title { font-size:125%; background:#F9C179; font-weight:bold; }
       .wrapper input { width:99%; float:left; padding:10px 0; margin:5px 0; }
@@ -37,8 +39,7 @@
       <input type="text" id="txtHeroes" default="Heroes" placeholder=" Enter enemy comp..." autofocus onclick="recognition.stop();" />
       <button id="record"></button>
     </div>
-    <div class="hero_pick"></div>    
-    <div class="selected"></div>
+    <div class="hero_pick"></div>
     <table style="font-size:80%;" align="center">
       <tr><th>What Not To Pick</th><th>What You Should Pick</th></tr>
       <tr>
